@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vdb name="honda-mongo-dvdemo" version="1">
+<description/>
+<property name="validationDateTime" value="Wed Apr 18 11:38:53 EDT 2018"/>
+<property name="validationVersion" value="8.12.11"/>
+<model name="MongoView" type="VIRTUAL">
+<property name="imports" value="Mongo"/>
+<metadata type="DDL"><![CDATA[
+
+CREATE VIEW sampleCollection (
+	_id object OPTIONS(UPDATABLE 'FALSE'),
+	firstName string OPTIONS(UPDATABLE 'FALSE'),
+	lastName string OPTIONS(UPDATABLE 'FALSE'),
+	age string OPTIONS(UPDATABLE 'FALSE'),
+	CONSTRAINT PK0 PRIMARY KEY(_id)
+) 
+AS
+	SELECT * FROM Mongo.sampleCollection;
+
+]]></metadata>
+</model>
+<model name="Mongo">
+<source connection-jndi-name="java:/mongo" name="Mongo" translator-name="mongodb"/>
+<metadata type="DDL"><![CDATA[
+
+CREATE FOREIGN TABLE sampleCollection (
+	_id object,
+	firstName string,
+	lastName string,
+	age string,
+	CONSTRAINT PK0 PRIMARY KEY(_id)
+) OPTIONS(UPDATABLE 'TRUE');
+
+]]></metadata>
+</model>
+</vdb>
