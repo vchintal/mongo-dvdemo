@@ -42,8 +42,8 @@ oc secrets link datavirt-service-account datavirt-app-secret datavirt-app-config
 ## Create a MongoDB POD instance
 
 Use the OpenShift 3.9 management UI to find/launch a MongoDB instance, provide the following as the configuration values:
-* Username : vchintal
-* Password : vchintal 
+* Username : userid
+* Password : userid 
 * Admin Password : admin 
 * Database Name : sampledb 
 
@@ -57,7 +57,7 @@ oc get pods
 oc rsh mongodb-1-<podId>
 
 # At the terminal run the following client command to connect to sampledb database
-mongo sampledb -u vchintal -p vchintal
+mongo sampledb -u userid -p userid
 
 # Create sample entries as shown below
 db.createCollection("sampleCollection")
