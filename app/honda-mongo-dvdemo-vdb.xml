@@ -12,7 +12,7 @@ CREATE VIEW sampleCollection (
 	firstName string OPTIONS(UPDATABLE 'FALSE'),
 	lastName string OPTIONS(UPDATABLE 'FALSE'),
 	age string OPTIONS(UPDATABLE 'FALSE'),
-	CONSTRAINT PK0 PRIMARY KEY(_id)
+	CONSTRAINT PK0 PRIMARY KEY("_id")
 ) 
 AS
 	SELECT * FROM Mongo.sampleCollection;
@@ -28,7 +28,7 @@ CREATE FOREIGN TABLE sampleCollection (
 	firstName string,
 	lastName string,
 	age string,
-	CONSTRAINT PK0 PRIMARY KEY(_id)
+	CONSTRAINT PK0 PRIMARY KEY("_id")
 ) OPTIONS(UPDATABLE 'TRUE');
 
 ]]></metadata>
