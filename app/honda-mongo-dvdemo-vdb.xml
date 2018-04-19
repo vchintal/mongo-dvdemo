@@ -8,7 +8,7 @@
 <metadata type="DDL"><![CDATA[
 
 CREATE VIEW sampleCollection (
-	_id object OPTIONS(UPDATABLE 'FALSE'),
+	"_id" object OPTIONS(UPDATABLE 'FALSE'),
 	firstName string OPTIONS(UPDATABLE 'FALSE'),
 	lastName string OPTIONS(UPDATABLE 'FALSE'),
 	age string OPTIONS(UPDATABLE 'FALSE'),
@@ -24,7 +24,7 @@ AS
 <metadata type="DDL"><![CDATA[
 
 CREATE FOREIGN TABLE sampleCollection (
-	_id object,
+	"_id" object,
 	firstName string,
 	lastName string,
 	age string,
