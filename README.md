@@ -30,7 +30,7 @@ keytool -genseckey -alias secret-key -storetype JCEKS -storepass $CLUSTERPASS -k
 
 # The datavirt-app-config secret tracks all the datasources and resource adapter definitions 
 # Ideally keep the secret name the same as the template references it
-oc create secret generic datavirt-app-config --from-file=datasources.env
+oc secrets new datavirt-app-config datasources.env
 
 # keystore.jks is for SSL over JDBC and jgroups.jceks is needed for enabling SSL for JGroups clustering
 oc create secret generic datavirt-app-secret --from-file=keystore.jks --from-file=jgroups.jceks
