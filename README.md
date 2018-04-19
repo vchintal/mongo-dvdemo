@@ -57,7 +57,7 @@ oc get pods
 oc rsh mongodb-1-<podId>
 
 # At the terminal run the following client command to connect to sampledb database
-mongo sampledb -u userid -p userid
+mongo ${MONGODB_DATABASE} -u ${MONGODB_USERNAME} -p ${MONGODB_PASSWORD}
 
 # Create sample entries as shown below
 db.createCollection("sampleCollection")
