@@ -103,6 +103,6 @@ Use the following specific settings for the JDBC connection
 
 The eventual JDBC URL should look like the following :
 
-`jdbc:teiid:honda-mongo-dvdemo@mms://jdbc-datavirt-app-myproject.[OpenShift Master DNS]:443`
+`jdbc:teiid:mongo-dvdemo@mms://jdbc-datavirt-app-myproject.[OpenShift Master DNS]:443`
 
 Take a note of the protocol, it should be **mms** and not **mm**.

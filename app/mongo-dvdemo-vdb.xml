@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<vdb name="honda-mongo-dvdemo" version="1">
+<vdb name="mongo-dvdemo" version="1">
 <description/>
 <property name="validationDateTime" value="Wed Apr 18 11:38:53 EDT 2018"/>
 <property name="validationVersion" value="8.12.11"/>
